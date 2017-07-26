@@ -1,0 +1,12 @@
+{
+  "name": "jest-unique-reporter",
+  "version": "1.0.0",
+  "description": "A jest reporter that enforces unique test names",
+  "main": "index.js",
+  "repository": "git@github.com:palmerj3/jest-unique-reporter.git",
+  "author": "Jason Palmer <jason@jason-palmer.com>",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "chalk": "^2.0.1"
+  }
+}
