@@ -1,5 +1,6 @@
 # jest-unique-reporter
-A jest reporter that enforces unique test names
+A jest reporter that enforces unique test names.
+If duplicate test names are found then the test run will fail and tell you where the duplicates are.
 
 ## Installation
 
