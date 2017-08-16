@@ -44,7 +44,12 @@ class UniqueTestNames {
 
       const relativeTestFilePath = suite.testFilePath.replace(rootDir, '');
 
-      const titles = suite.testResults.map((t) => {
+      // Skip over skipped tests
+      // Title is always blank for these for some reason..
+      const titles = suite.testResults
+        .filter((t) => t.status !== 'pending')
+        .map((t) => {
+
         const testStruct = {
           title: t.title,
           filename: relativeTestFilePath
