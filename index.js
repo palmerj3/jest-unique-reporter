@@ -63,10 +63,10 @@ class UniqueTestNames {
           if (this._options.useFullName) {
             // Unique describe->test per file
             key = `${relativeTestFilePath}-${t.fullName}`;
+          } else {
+            // Unique test name across per file
+            key = `${relativeTestFilePath}-${t.title}`;
           }
-
-          // Unique test name across per file
-          key = `${relativeTestFilePath}-${t.title}`;
         }
         const testStruct = {
           title: key,
