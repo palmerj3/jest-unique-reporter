@@ -50,20 +50,15 @@ class UniqueTestNames {
         .filter((t) => t.status !== 'pending')
         .map((t) => {
 
-        const testStruct = {
-          title: t.title,
-          filename: relativeTestFilePath
-        };
-
         let key = '';
         if (this._options.global) {
           if (this._options.useFullName) {
             // Unique describe->test across all files
             key = t.fullName;
+          } else {
+            // Unique test names across all files
+            key = t.title;
           }
-
-          // Unique test names across all files
-          key = t.title;
         } else {
           if (this._options.useFullName) {
             // Unique describe->test per file
@@ -73,6 +68,10 @@ class UniqueTestNames {
           // Unique test name across per file
           key = `${relativeTestFilePath}-${t.title}`;
         }
+        const testStruct = {
+          title: key,
+          filename: relativeTestFilePath
+        };
 
         return Object.assign(
           {},
