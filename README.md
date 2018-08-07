@@ -4,7 +4,7 @@ If duplicate test names are found then the test run will fail and tell you where
 
 ## Deprecated
 
-jest-unique-reporter is not longer supported. Please use eslint-plugin-jest for a much better way to prevent duplicate test names (and many more common testing problems). https://github.com/jest-community/eslint-plugin-jest
+jest-unique-reporter is no longer supported. Please use eslint-plugin-jest for a much better way to prevent duplicate test names (and many more common testing problems). https://github.com/jest-community/eslint-plugin-jest
 
 ## Installation
 
